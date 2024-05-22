@@ -13,7 +13,7 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Car car = new Car(1L,"BMW","BMW","325",1923,"B4352HP");
+        Car car = new Car(1L,"BMW","325",1923,"B4352HP");
 
         this.carsService.addCar(car);
     }

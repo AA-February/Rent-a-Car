@@ -5,6 +5,8 @@ import com.advance.academy.rentacar.repository.CarsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class CarsService {
 
@@ -15,7 +17,13 @@ public class CarsService {
         this.carsRepository = carsRepository;
     }
 
-    public void addCar(Car car) {
-        this.carsRepository.save(car);
+    public Car addCar(Car car) {
+        //
+       return this.carsRepository.save(car);
     }
+
+    public Optional<Car> findCar(long id){
+        return this.carsRepository.findById(id);
+    }
+
 }

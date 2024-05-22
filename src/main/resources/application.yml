@@ -4,10 +4,10 @@ spring:
   application:
     name: rent-a-car
   datasource:
-    url: jdbc:mysql://localhost:3306/rent_a_car1?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/rent_a_car?createDatabaseIfNotExist=true
     driverClassName: com.mysql.cj.jdbc.Driver
     username: root
-    password: <your password>
+#    password: <your password>
   jpa:
     hibernate:
       ddl-auto: create

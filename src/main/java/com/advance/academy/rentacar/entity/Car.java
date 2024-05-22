@@ -1,9 +1,6 @@
 package com.advance.academy.rentacar.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -13,9 +10,9 @@ import lombok.*;
 @NoArgsConstructor
 public class Car {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String brand;
-    private String make;
     private String model;
     @Column(name = "manufacturing_year")
     private Integer year;
